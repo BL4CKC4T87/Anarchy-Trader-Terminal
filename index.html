@@ -1823,12 +1823,12 @@ renderItems();
 (function() {
   const popup = document.getElementById('welcomePopup');
 
-  // After 8s, start drifting to bottom-left corner
+  // After 5s, start drifting to bottom-left corner
   setTimeout(() => {
     popup.classList.add('drifting');
     popup.classList.add('corner');
     popup.onclick = openReadme;
-  }, 8000);
+  }, 5000);
 })();
 
 function openReadme() {
