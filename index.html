@@ -940,7 +940,7 @@ For permissions beyond this license:
       <option value="vehiclepart">Vehicle Parts</option>
       <option value="repair">Repair Items</option>
       <option value="medical">Medical</option>
-      <option value="misc">Building</option>
+      <option value="building">Building</option>
       <option value="storage">Storage</option>
       <option value="key">Keys</option>
       <option value="catfood">Catfood</option>
@@ -1094,6 +1094,7 @@ const items = {
   "Protective Case": {category:"explosives", buy:1000, sell:500},
   "Remote Detonator": {category:"explosives", buy:1000, sell:500},
   "Kitchen Timer": {category:"explosives", buy:250, sell:125},
+  "Claymore": {category:"explosives", buy:3500, sell:1750},
 
   // Magazines
   "CR-75 Mag": {category:"mag", buy:135, sell:68},
@@ -1176,11 +1177,11 @@ const items = {
   "1PN51 NV Scope": {category:"attachment", buy:5000, sell:2500},
 
   // Attachments
-  "Universal Flashlight": {category:"attachment", buy:200, sell:100},
-  "Pistol Flashlight": {category:"attachment", buy:150, sell:75},
-  "KA Rail Handguard": {category:"attachment", buy:400, sell:200},
+  "Universal Flashlight": {category:"attachment", buy:200, sell:null},
+  "Pistol Flashlight": {category:"attachment", buy:150, sell:null},
+  "KA Rail Handguard": {category:"attachment", buy:400, sell:null},
   "KA Rail Handguard Green": {category:"attachment", buy:450, sell:225},
-  "KA Lightweight Buttstock": {category:"attachment", buy:500, sell:250},
+  "KA Lightweight Buttstock": {category:"attachment", buy:500, sell:null},
   "KA Wood Handguard (Dark)": {category:"attachment", buy:350, sell:175},
   "KA Wood Handguard (Light)": {category:"attachment", buy:350, sell:175},
   "KA Wood Handguard (Camo)": {category:"attachment", buy:400, sell:200},
@@ -1195,7 +1196,7 @@ const items = {
   "Pistol Suppressor": {category:"attachment", buy:700, sell:350},
   "Standardized Suppressor (American)": {category:"attachment", buy:1700, sell:850},
   "Normalized Suppressor (Russian)": {category:"attachment", buy:1500, sell:750},
-  "Bottle Suppressor": {category:"attachment", buy:200, sell:100},
+  "Bottle Suppressor": {category:"attachment", buy:200, sell:null},
 
   // Melee
   "Sword": {category:"melee", buy:1700, sell:850},
@@ -1206,7 +1207,9 @@ const items = {
   "Machete": {category:"melee", buy:500, sell:250},
   "Machete Oriental": {category:"melee", buy:1000, sell:500},
   "Machete Crude": {category:"melee", buy:1000, sell:500},
-
+  "M4-A1 Bayonet": {category:"melee", buy:400, sell:200},
+  "KA Bayonet": {category:"melee", buy:400, sell:200},
+  
   // Armor - Helmets
   "Assault Helmet": {category:"armor", buy:2200, sell:1100},
   "Ballistic Helmet": {category:"armor", buy:1700, sell:850},
@@ -1227,8 +1230,8 @@ const items = {
   "Field Vest": {category:"armor", buy:700, sell:350},
   "Assault Vest": {category:"armor", buy:1500, sell:750},
   "Butt pack": {category:"armor", buy:500, sell:250},
-  "Press Vest": {category:"armor", buy:1300, sell:650},
-  "Stab Vest": {category:"armor", buy:1000, sell:500},
+  "Press Vest": {category:"armor", buy:1300, sell:null},
+  "Stab Vest": {category:"armor", buy:1000, sell:null},
   "Chainmail Shirt": {category:"armor", buy:2200, sell:1100},
   "Chainmail Pants": {category:"armor", buy:2000, sell:1000},
   "Chestplate": {category:"armor", buy:2500, sell:1250},
@@ -1338,27 +1341,28 @@ const items = {
   "Chelating Tablets": {category:"medical", buy:1000, sell:500},
 
   // Tools (Building)
-  "Hammer": {category:"misc", buy:400, sell:200},
-  "Hatchet": {category:"misc", buy:500, sell:250},
-  "Splitting Axe": {category:"misc", buy:700, sell:350},
-  "Firefighter Axe": {category:"misc", buy:900, sell:450},
-  "Shovel": {category:"misc", buy:600, sell:300},
-  "Pickaxe": {category:"misc", buy:700, sell:350},
-  "Handsaw": {category:"misc", buy:450, sell:225},
-  "Hacksaw": {category:"misc", buy:350, sell:175},
-  "Pliers": {category:"misc", buy:300, sell:150},
-  "Sledgehammer": {category:"misc", buy:1000, sell:500},
+  "Hammer": {category:"building", buy:400, sell:200},
+  "Hatchet": {category:"building", buy:500, sell:250},
+  "Splitting Axe": {category:"building", buy:700, sell:350},
+  "Firefighter Axe": {category:"building", buy:900, sell:450},
+  "Shovel": {category:"building", buy:600, sell:300},
+  "Pickaxe": {category:"building", buy:700, sell:350},
+  "Handsaw": {category:"building", buy:450, sell:225},
+  "Hacksaw": {category:"building", buy:350, sell:175},
+  "Pliers": {category:"building", buy:300, sell:150},
+  "Sledgehammer": {category:"building", buy:1000, sell:500},
+  "Sharpening Stone": {category:"building", buy:1000, sell:500},
 
   // Building / Construction
-  "Wood Planks x10": {category:"misc", buy:300, sell:150},
-  "Wood Logs x10": {category:"misc", buy:200, sell:100},
-  "Metal Sheets x10": {category:"misc", buy:900, sell:450},
-  "Nailbox": {category:"misc", buy:500, sell:250},
-  "Rope": {category:"misc", buy:250, sell:125},
-  "Metal Wire": {category:"misc", buy:400, sell:200},
-  "Barbed Wire": {category:"misc", buy:450, sell:225},
-  "Tarp x4": {category:"storage", buy:400, sell:200},
-  "Tanned Leather x8": {category:"storage", buy:500, sell:250},
+  "Wood Planks x10": {category:"building", buy:300, sell:150},
+  "Wood Logs x10": {category:"building", buy:200, sell:100},
+  "Metal Sheets x10": {category:"building", buy:900, sell:450},
+  "Nailbox": {category:"building", buy:500, sell:250},
+  "Rope": {category:"building", buy:250, sell:125},
+  "Metal Wire": {category:"building", buy:400, sell:200},
+  "Barbed Wire": {category:"building", buy:450, sell:225},
+  "Tarp x4": {category:"building", buy:400, sell:200},
+  "Tanned Leather x8": {category:"building", buy:500, sell:250},
 
   // Storage / Tents
   "Canopy Tent": {category:"storage", buy:1200, sell:600},
@@ -1448,18 +1452,18 @@ const items = {
   "Attack2Bag Green": {category:"unreleased", buy:null, sell:null},
   "Attack2Bag Ttsko": {category:"unreleased", buy:null, sell:null},
   "Attack2Bag Yeger": {category:"unreleased", buy:null, sell:null},
-  "Container Key (Pristine)": {category:"key", buy:20000, sell:10000},
-  "Container Key (Worn)": {category:"key", buy:15000, sell:7500},
-  "Container Key (Damaged)": {category:"key", buy:10000, sell:5000},
-  "Container Key (Badly Damaged)": {category:"key", buy:5000, sell:2500},
-  "Briefcase Key (Pristine)": {category:"key", buy:30000, sell:15000},
-  "Briefcase Key (Worn)": {category:"key", buy:22500, sell:11250},
-  "Briefcase Key (Damaged)": {category:"key", buy:15000, sell:7500},
-  "Briefcase Key (Badly Damaged)": {category:"key", buy:7500, sell:3750},
-  "Punchcard (Pristine)": {category:"key", buy:40000, sell:20000},
-  "Punchcard (Worn)": {category:"key", buy:30000, sell:15000},
-  "Punchcard (Damaged)": {category:"key", buy:20000, sell:10000},
-  "Punchcard (Badly Damaged)": {category:"key", buy:10000, sell:5000},
+  "Container Key (Pristine)": {category:"key", buy:null, sell:20000},
+  "Container Key (Worn)": {category:"key", buy:null, sell:15000},
+  "Container Key (Damaged)": {category:"key", buy:null, sell:10000},
+  "Container Key (Badly Damaged)": {category:"key", buy:null, sell:5000},
+  "Briefcase Key (Pristine)": {category:"key", buy:30000, sell:10000},
+  "Briefcase Key (Worn)": {category:"key", buy:22500, sell:7500},
+  "Briefcase Key (Damaged)": {category:"key", buy:15000, sell:5000},
+  "Briefcase Key (Badly Damaged)": {category:"key", buy:7500, sell:2500},
+  "Punchcard (Pristine)": {category:"key", buy:null, sell:40000},
+  "Punchcard (Worn)": {category:"key", buy:null, sell:30000},
+  "Punchcard (Damaged)": {category:"key", buy:null, sell:20000},
+  "Punchcard (Badly Damaged)": {category:"key", buy:40000, sell:10000},
 };
 
 function formatBalance(val) {
@@ -1757,7 +1761,7 @@ function copyInvoice() {
 
   const ordered = [...log].reverse();
   const lines = [
-    '// C4TBØT INVOICE',
+    '// C4TB0T INVOICE',
     `Player: ${playerTag}`,
     `Generated: ${dateStr} at ${timeStr} CST`,
     '─'.repeat(40),
