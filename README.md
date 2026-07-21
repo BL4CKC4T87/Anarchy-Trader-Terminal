@@ -1,5 +1,5 @@
 # 🐾 C4TB0T
-C4TB0T Trader Calculator for DayZ Xbox One 1.28
+C4TB0T Trader Calculator for DayZ Xbox One 1.29
 Created and maintained by **BL4CKC4T87**
 
 Trackz ur buys and sells, calculatez ur balances, generatez ur trade invoices.
